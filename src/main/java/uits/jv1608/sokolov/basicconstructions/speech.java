@@ -9,6 +9,7 @@ import java.util.Random;
 public class speech {
     public static void main(String[] args) {
         String speech[][] = new String[4][11];
+        
         speech[0][0]="Дорогие друзья! ";
         speech[0][1]="C другой стороны ";
         speech[0][2]="Hавным образом ";
@@ -57,7 +58,7 @@ public class speech {
 
         int i0 , j;
         Random r0 = new Random();
-        for (int i = 0; i < 20; i++) {
+        for (int i = 0; i < 6; i++) {
             for ( j = 0; j < 4; j++) {
                 i0 = r0.nextInt(10);
                 System.out.print(speech[j][i0]);
