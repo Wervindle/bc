@@ -22,12 +22,10 @@ public class ODArray {
         System.out.print("четные числа массива: ");
         even(arr);
         System.out.println("");
-
         System.out.print("нечетные числа массива: ");
         uneven(arr);
         System.out.println("");
         summMult7(arr);
-//        System.out.println("");
         product(arr);
         
         
@@ -42,6 +40,8 @@ public class ODArray {
            
         }
     }
+    
+    
     public static void even(int[] arr) {
           for (int i = 0; i < 15; i++) {
               if(arr[i] % 2 == 0){
@@ -49,6 +49,8 @@ public class ODArray {
               }
           }
     }
+    
+    
     public static void uneven(int[] arr) {
         for (int i = 0; i < 15; i++) {
               if(arr[i] % 2 != 0){
@@ -65,9 +67,10 @@ public class ODArray {
                 summ7 = arr[i] + summ7;
             }
         }
-//        System.out.println("");
         System.out.println("сумма элементов кратных 7 = " + summ7);
     }
+    
+    
     public static void product(int[] arr) {
         int summ7 = 1;
         for (int i = 0; i < 15; i++) {
@@ -75,7 +78,6 @@ public class ODArray {
                 summ7 = arr[i] * summ7;
             }
         }
-//        System.out.println("");
         System.out.println("произведение элементов кратных 3 = " + summ7);
     }
     
