@@ -10,21 +10,25 @@ public class ODArray {
     public static void main(String[] args) {
         int[] arr = new int[15];
         Random r = new Random();
-        for (int i = 0; i < 15; i++) {
+        for (int i = 0; i < arr.length; i++) {
             int r0 = r.nextInt(100);
             arr[i] = r0;
-            }
+        }
         System.out.print("вывод элементов массива в прямом порядке: ");
         System.out.println(Arrays.toString(arr));
+        
         System.out.print("вывод элементов массива в обратном порядке: ");
         invert(arr);
         System.out.println(Arrays.toString(arr));
+        
         System.out.print("четные числа массива: ");
         even(arr);
         System.out.println("");
+        
         System.out.print("нечетные числа массива: ");
         uneven(arr);
         System.out.println("");
+        
         summMult7(arr);
         product(arr);
         
@@ -32,7 +36,7 @@ public class ODArray {
     }    
     
     
-    public static void invert(int[] arr) {
+    private static void invert(int[] arr) {
         for (int k = 0; k < arr.length/2; k++) {
             int tmp = arr[k];
             arr[k] = arr[arr.length - k -1];
@@ -42,8 +46,8 @@ public class ODArray {
     }
     
     
-    public static void even(int[] arr) {
-          for (int i = 0; i < 15; i++) {
+    private static void even(int[] arr) {
+          for (int i = 0; i < arr.length; i++) {
               if(arr[i] % 2 == 0){
                   System.out.print(arr[i] + " ");
               }
@@ -51,8 +55,8 @@ public class ODArray {
     }
     
     
-    public static void uneven(int[] arr) {
-        for (int i = 0; i < 15; i++) {
+    private static void uneven(int[] arr) {
+        for (int i = 0; i < arr.length; i++) {
               if(arr[i] % 2 != 0){
                   System.out.print(arr[i] + " ");
               }
@@ -60,9 +64,9 @@ public class ODArray {
     }
     
     
-    public static void summMult7(int[] arr) {
+    private static void summMult7(int[] arr) {
         int summ7 = 0;
-        for (int i = 0; i < 15; i++) {
+        for (int i = 0; i < arr.length; i++) {
             if (arr[i] % 7 == 0) {
                 summ7 = arr[i] + summ7;
             }
@@ -71,9 +75,9 @@ public class ODArray {
     }
     
     
-    public static void product(int[] arr) {
+    private static void product(int[] arr) {
         int summ7 = 1;
-        for (int i = 0; i < 15; i++) {
+        for (int i = 0; i < arr.length; i++) {
             if (arr[i] % 3 == 0) {
                 summ7 = arr[i] * summ7;
             }
